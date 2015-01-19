@@ -4,6 +4,7 @@ $('video').each( function() {
     var time = 0;
       $('.videosync').not('video').each(function(){
           var $this = $(this);
+          $this.hide();
           nodes.push({
               start: this.getAttribute('data-videosync-start'),
               end: this.getAttribute('data-videosync-end'),
