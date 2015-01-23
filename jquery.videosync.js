@@ -15,8 +15,10 @@ $('video').each( function() {
         time = parseInt(video.currentTime);
         for (var i = 0; i < nodes.length; i++) {
             var node = nodes[i];
-            if (time >= node.start) {
+            if ((time >= node.start) && (node.end ? time < node.end : true)) {
                 node.element.show();
+            } else if (((time < node.start) || (node.end ? time >= node.end : false))) {
+                node.element.hide();
             }
         }
     }, false);
