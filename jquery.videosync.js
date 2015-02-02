@@ -29,4 +29,5 @@
             }, false);
         });
     };
+    $('video.videosync').videosync();
 }(jQuery));
