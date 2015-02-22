@@ -1,3 +1,8 @@
+/*!
+ * jQuery VideoSync
+ * Shows or hides page content based on video playback time
+ * https://github.com/MA3STR0/jquery-videosync
+ * by ma3str0 */
 (function($) {
     $.fn.videosync = function() {
         return this.each( function() {
