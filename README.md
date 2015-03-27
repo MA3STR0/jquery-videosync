@@ -16,7 +16,7 @@ Alternatively, you may just copy contents of `jquery.videosync.js` to your code.
 Usage
 ----
 
-**Without customJS**
+**HTML**
 
 * Add `videosync` class to the <video> element: `<video class="videosync" autoplay loop>`
 * For elements that you want to show/hide based on video time:
@@ -25,10 +25,16 @@ Usage
     values of time in seconds relative to video start.
   `<div class="videosync" data-videosync-start="1" data-videosync-end=15>Hello</div>`
 
-**Or with JS**
+**JS (optional)**
 
 * Instead of adding `videosync` class to video element you can directly call its .videosync() method to make it the source for plugin timing: `$('#my-video').videosync()`
 * Depending elements to show/hide are currently only settable through HTML class and data- attributes.
+
+**Animations**
+
+It's pretty easy to animate the way elements appear on the page. For example, get [Animate.css](https://github.com/daneden/animate.css/) and just add appropriate classes to your animated elements, eg
+
+    <div class="videosync animated bounceInRight" data-videosync-start="5">Hello</div>
 
 
 Compatibility
@@ -46,3 +52,20 @@ License
 -------
 
 Project has a MIT License. It basically means: "do whatever you want with it".
+
+
+Contributing
+------------
+**Issues**
+
+Feel free to report issues or feature requests on GitHub Issues.
+If reporting a bug, please add a simplified example.
+
+**Pull requests**
+
+Code contributions are appreciated, just make sure to test your changes in major
+browsers and doublecheck the code in jshint.
+
+Authors
+-------
+jQuery-VideoSync was implemented by [MA3STR0](https://github.com/MA3STR0/)
