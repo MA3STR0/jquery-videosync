@@ -1,7 +1,11 @@
 jQuery-VideoSync
 ================
 
-###Tiny jQuery plugin (<1KB minimized) that shows or hides page content based on video playback timer
+###jQuery plugin that toggles page content based on video playback timer
+
+####Tiny (<1KB minimized), easy to use, animation-friendly.
+
+**DEMO**: http://MA3STR0.github.io/jquery-videosync
 
 Installation
 ------------
