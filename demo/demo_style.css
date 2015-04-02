@@ -1,0 +1,36 @@
+.facts {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.7em;
+}
+.facts > li {
+    padding-bottom: 10px;
+}
+
+.jumbotron {
+    @media(max-width:767px) {
+        text-align: center;
+    }
+}
+
+.jumbotron > h3 {
+    margin-top: 0;
+}
+
+.video-image-frame {
+    max-width: 466px;
+    margin: 0 auto;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb15 {
+    margin-bottom: 15px;
+}
+.mb25 {
+    margin-bottom: 25px;
+}
+.container {
+    max-width: 970px;
+}
