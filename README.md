@@ -1,9 +1,9 @@
 jQuery-VideoSync
 ================
 
-###jQuery plugin that toggles page content based on video playback timer
+###jQuery plugin that helps you animate elements based on video playback timer
 
-####Tiny (<1KB minimized), easy to use, animation-friendly.
+Tiny (<1KB minimized), easy to use, CSS-animation friendly.
 
 **DEMO**: http://MA3STR0.github.io/jquery-videosync
 
@@ -22,23 +22,26 @@ Usage
 
 **HTML**
 
-* Add `videosync` class to the <video> element: `<video class="videosync" autoplay loop>`
-* For elements that you want to show/hide based on video time:
-  * Add `videosync` class
-  * Add `data-videosync-start` and optionally `data-videosync-end` attributes vith
-    values of time in seconds relative to video start.
-  `<div class="videosync" data-videosync-start="1" data-videosync-end=15>Hello</div>`
+* Add `videosync-source` class to the <video> element: `<video class="videosync-source" autoplay loop>`
+* For elements that you want to update based on video playback time:
+  * Add `videosync` class: `<div class="videosync">Hello</div>`
+  * Add `data-videosync-start` attribute indicating time in seconds relative to video start: `<div class="videosync" data-videosync-start="1">Hello</div>`
+  * Optinally add `data-videosync-end` attribute
+  * Add `data-videosync-class` attribute containing class name to add or remove based on timer: `<div class="videosync" data-videosync-class="bounce" data-videosync-start="1">
 
 **JS (optional)**
 
-* Instead of adding `videosync` class to video element you can directly call its .videosync() method to make it the source for plugin timing: `$('#my-video').videosync()`
-* Depending elements to show/hide are currently only settable through HTML class and data- attributes.
+  * Instead of adding `videosync` class to video element you can directly call its .videosync() method to make it the source for plugin timing: `$('#my-video').videosync()`
+
+**Show/hide content**
+
+VideoSync is toggling desired element class for you, so using a class like "hidden" with style `display: none` will hide your element, and class with `display: block` will show it.
 
 **Animations**
 
-It's pretty easy to animate the way elements appear on the page. For example, get [Animate.css](https://github.com/daneden/animate.css/) and just add appropriate classes to your animated elements, eg
+CSS animations are really easy to use with class toggling. The easiest way to get started is [Animate.css](https://github.com/daneden/animate.css/): just include animate.css, choose desired animation and add appropriate class to `data-videosync-class` attribute:
 
-    <div class="videosync animated bounceInRight" data-videosync-start="5">Hello</div>
+    <div class="videosync animated" data-videosync-class="bounce" data-videosync-start="5">Hello</div>
 
 
 Compatibility
@@ -49,7 +52,9 @@ Compatibility
 * Chrome 42
 * Safari 8
 
-Should generally work in any browser that supports HTML5 video
+Based on HTML5 <video> element, not youtube/vimeo/etc.
+
+Should generally work in any modern browser.
 
 
 License
