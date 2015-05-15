@@ -29,24 +29,31 @@
           <h3 class="text-center mb25">Synchronize page elements with video timer</h3>
           <div class="col-sm-7 col-md-7">
             <div class="video-image-frame mb15">
-                <video class="videosync" width="100%" autoplay preload="auto">
+                <video class="videosync-source" width="100%" autoplay loop preload="auto">
                   <source src="http://e5t.ro/jquery_videosync_demo.mp4" type="video/mp4">
                 </video>
             </div>
           </div>
           <div class="col-sm-5 col-md-5">
             <ul class="facts">
-              <li class="videosync animated fadeIn" data-videosync-start="3">Tough situation</li>
-              <li class="videosync animated zoomInLeft" data-videosync-start="10">But not with my car</li>
-              <li class="videosync animated rubberBand" data-videosync-start="15">Eat that, biatch!</li>
-              <li class="videosync animated tada" data-videosync-start="22">Wow, this guy rocks ^_^</li>
+              <li class="videosync animated" data-videosync-class="action fadeIn" data-videosync-start="3">Tough situation</li>
+              <li class="videosync animated" data-videosync-class="action zoomInLeft" data-videosync-start="10">But not with my car</li>
+              <li class="videosync animated" data-videosync-class="action rubberBand" data-videosync-start="15">Eat that, biatch!</li>
+              <li class="videosync animated" data-videosync-class="action tada" data-videosync-start="22">Wow, this guy rocks ^_^</li>
             </ul>
           </div>
         </div>
         <div class="row mb25">
             <div class="col-sm-12">
+                <h3>How does it work?</h3>
+                <p>Very easy. On each animated element you specify start time and class name; videsync will add this class name to your element when video playback timer matches your start-time. All effects are pure CSS. 
+                </p>
+            </div>
+        </div>
+        <div class="row mb25">
+            <div class="col-sm-12">
                 <h3>Cool! How to install it?</h3>
-                <p>Super simple. Follow instructions on Github: <a href="https://github.com/MA3STR0/jquery-videosync">https://github.com/MA3STR0/jquery-videosync</a></p>
+                <p>Super simple. Download, add to page, set desired attributes. All instructions on Github: <a href="https://github.com/MA3STR0/jquery-videosync">https://github.com/MA3STR0/jquery-videosync</a></p>
             </div>
         </div>
       </div>

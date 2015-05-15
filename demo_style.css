@@ -3,8 +3,13 @@
     padding-left: 0;
     font-size: 1.7em;
 }
-.facts > li {
+.videosync {
     padding-bottom: 10px;
+    display: none;
+}
+
+.videosync.action {
+    display: block
 }
 
 .jumbotron {
