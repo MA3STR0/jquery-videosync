@@ -6,18 +6,19 @@
         return this.each( function() {
             var video = this;
             var nodes = [];
-            var time = 0;
+            var lastTime = -1;
+            var time;
               $('.videosync').each(function(){
                   var $this = $(this);
                   nodes.push({
-                      start: $this.data('videosync-start'),
-                      end: $this.data('videosync-end'),
+                      start: parseFloat($this.data('videosync-start')),
+                      end: parseFloat($this.data('videosync-end')),
                       class: $this.data('videosync-class'),
                       element: $this
                   });
               });
-            video.addEventListener('timeupdate',function(){
-                time = parseInt(video.currentTime);
+            video.addEventListener('timeupdate', function(){
+                time = parseFloat(video.currentTime);
                 for (var i = 0; i < nodes.length; i++) {
                     var node = nodes[i];
                     if ((!node.element.hasClass(node.class)) && (time >= node.start) && (node.end ? time < node.end : true)) {
