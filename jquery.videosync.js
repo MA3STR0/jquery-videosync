@@ -19,6 +19,10 @@
               });
             video.addEventListener('timeupdate', function(){
                 time = parseFloat(video.currentTime);
+                if (Math.abs(time - lastTime) < 0.1) {
+                    return
+                }
+                lastTime = time;
                 for (var i = 0; i < nodes.length; i++) {
                     var node = nodes[i];
                     if ((!node.element.hasClass(node.class)) && (time >= node.start) && (node.end ? time < node.end : true)) {
