@@ -7,41 +7,60 @@ Tiny (<1KB minimized), easy to use, CSS-animation friendly.
 
 **DEMO**: http://MA3STR0.github.io/jquery-videosync
 
+TL;DR
+-----
+    <video class="vs-source">
+      <source src="demo.mp4" type="video/mp4">
+    </video>
+    <h3 class="vs animated" data-vs-in-time="3" data-vs-in-class="bounce">I will bounce on 3rd second of video</h3>
+      
+
 Installation
 ------------
 
-Load script file `jquery.videosync.js` or `jquery.videosync.min.js` in any place after jQuery script.
-
+1. Include script file `jquery.videosync.js` or `jquery.videosync.min.js` to your html in any place after jQuery.
     <script src="/path/to/jquery.videosync.js"></script>
 
-Alternatively, you may just copy contents of `jquery.videosync.js` to your code.
+2. You proabably want to use [Animate.css](https://github.com/daneden/animate.css/), so include it too
 
 
 Usage
-----
+-----
 
 **HTML**
 
-* Add `videosync-source` class to the <video> element: `<video class="videosync-source" autoplay loop>`
-* For elements that you want to update based on video playback time:
-  * Add `videosync` class: `<div class="videosync">Hello</div>`
-  * Add `data-videosync-start` attribute indicating time in seconds relative to video start: `<div class="videosync" data-videosync-start="1">Hello</div>`
-  * Optinally add `data-videosync-end` attribute
-  * Add `data-videosync-class` attribute containing class name to add or remove based on timer: `<div class="videosync" data-videosync-class="bounce" data-videosync-start="1">
+* Add `vs-source` class to the main <video> element: `<video class="vs-source" autoplay loop>`
+* For elements that you want to update based on playback:
+  * Add `vs` class: `<div class="vs">Hello</div>`
+  * Add `data-vs-in-time` attribute indicating animation start time in seconds relative to the video: `<div class="vs" data-vs-in-time="2">Hello on second 2</div>`
+  * Add `data-vs-in-class` attribute with class name to add when timer fires. If using Animate.css, this will be your animation name: `<div class="vs" data-vs-in-class="bounce" data-vs-in-time="2">
+  * Optinally set `data-vs-out-time` and `data-vs-out-class` attributes to add something like fade-out animation
+
+
+Example
+-------
+A very minimal page can look like:
+
+    <body>
+      <video class="vs-source" autoplay controls>
+        <source src="demo.mp4" type="video/mp4">
+      </video>
+      <h3 class="vs animated" data-vs-in-time="1" data-vs-in-class="bounce">I will bounce on 1st second</h3>
+      <h3 class="vs animated pre-hide" data-vs-in-time="3" data-vs-in-class="fadeIn">I will fadeIn on 3rd second</h3>
+      <h3 class="vs animated pre-hide" data-vs-in-time="6" data-vs-in-class="fadeInDown" data-vs-out-time="9" data-vs-out-class="fadeOutDown">I will fade in on 6th second and fade out on 9th</h3>
+    </body>
+
+See same working example on codepen: http://codepen.io/MA3STR0/pen/PqpqQd
 
 **JS (optional)**
 
-  * Instead of adding `videosync` class to video element you can directly call its .videosync() method to make it the source for plugin timing: `$('#my-video').videosync()`
-
-**Show/hide content**
-
-VideoSync is toggling desired element class for you, so using a class like "hidden" with style `display: none` will hide your element, and class with `display: block` will show it.
+  * Instead of adding `vs-source` class to video element you can directly call its .videosync() method to make it the source for plugin timing: `$('#my-video').videosync()`
 
 **Animations**
 
-CSS animations are really easy to use with class toggling. The easiest way to get started is [Animate.css](https://github.com/daneden/animate.css/): just include animate.css, choose desired animation and add appropriate class to `data-videosync-class` attribute:
+CSS animations are really easy to use with class toggling. The easiest way to get started is [Animate.css](https://github.com/daneden/animate.css/): just include animate.css, choose desired animation and add appropriate class to `data-vs-in-class` attribute:
 
-    <div class="videosync animated" data-videosync-class="bounce" data-videosync-start="5">Hello</div>
+    <div class="vs animated" data-vs-in-class="bounce" data-videosync-start="3">I will bounce in 3rd second of video</div>
 
 
 Compatibility
@@ -52,9 +71,9 @@ Compatibility
 * Chrome 42
 * Safari 8
 
-Based on HTML5 <video> element, not youtube/vimeo/etc.
+Based on HTML5 <video> element, will not work with youtube/vimeo/etc.
 
-Should generally work in any modern browser.
+Should generally run in any modern browser.
 
 
 License
