@@ -23,38 +23,70 @@
         <div class="row mb25">
           <div class="col-md-12">
             <h1>jQuery VideoSync</h1>
-            <h3>More interactive videos for your website</h3>
+            <h3>Interactive videos for your website</h3>
           </div>
         </div>
         <div class="row jumbotron">
-          <h3 class="text-center mb25">Synchronize page elements with video timer</h3>
+            <div class="ribbon">
+                <div class="ribbon-content">Synchronize page elements with video playback
+                </div>
+            </div>
           <div class="col-sm-7 col-md-7">
             <div class="video-image-frame mb15">
-                <video class="videosync-source" width="100%" autoplay loop preload="auto">
+                <video class="vs-source" width="100%" autoplay controls loop preload="auto">
                   <source src="http://e5t.ro/jquery_videosync_demo.mp4" type="video/mp4">
                 </video>
             </div>
           </div>
           <div class="col-sm-5 col-md-5">
             <ul class="facts">
-              <li class="videosync animated" data-videosync-class="action fadeIn" data-videosync-start="3">Tough situation</li>
-              <li class="videosync animated" data-videosync-class="action zoomInLeft" data-videosync-start="10">But not with my car</li>
-              <li class="videosync animated" data-videosync-class="action rubberBand" data-videosync-start="15">Eat that, biatch!</li>
-              <li class="videosync animated" data-videosync-class="action tada" data-videosync-start="22">Wow, this guy rocks ^_^</li>
+              <li class="vs animated prehide" data-vs-in-class="fadeIn" data-vs-in-time="3" data-vs-out-time="10">Tough situation</li>
+              <li class="vs animated prehide" data-vs-in-class="pulse" data-vs-in-time="10" data-vs-out-time="15">But not with my car</li>
+              <li class="vs animated prehide" data-vs-in-class="rubberBand" data-vs-in-time="15.5" data-vs-out-time="22">Eat that!</li>
+              <li class="vs animated prehide" data-vs-in-class="tada" data-vs-in-time="22">Wow, he rocks ^_^</li>
             </ul>
           </div>
+          <div class="vs animated banner prehide" data-vs-in-class="flipInX" data-vs-out-class="flipOutX" data-vs-in-time="23">Cool, huh?<br/>Yet so simple!
+          </div>
         </div>
-        <div class="row mb25">
+        <div class="row">
             <div class="col-sm-12">
-                <h3>How does it work?</h3>
-                <p>Very easy. On each animated element you specify start time and class name; videsync will add this class name to your element when video playback timer matches your start-time. All effects are pure CSS. 
+                <h3>Features</h3>
+                <p>Videosync triggers element updates based on video timer, so your effect will happen exactly when a particular content is shown in the video. You can:
+                <ul>
+                    <li>Show/hide elements</li>
+                    <li>Animate elements</li>
+                    <li>Set start- and end- time as event triggers</li>
                 </p>
             </div>
         </div>
-        <div class="row mb25">
+        <div class="row">
             <div class="col-sm-12">
-                <h3>Cool! How to install it?</h3>
-                <p>Super simple. Download, add to page, set desired attributes. All instructions on Github: <a href="https://github.com/MA3STR0/jquery-videosync">https://github.com/MA3STR0/jquery-videosync</a></p>
+                <h3>How does it work?</h3>
+                <ul>
+                    <li>Add "vs-source" class to your video and "vs" to animated elements</li>
+                    <li></li>
+                </ul>
+                <p>Specify start time and class name as "data-vs-in-" attributes for desired elements, and videsync will add this class when video timer triggers:<br/>
+                <kbd>&lt;div class="vs" data-vs-in-time="4.2" data-vs-in-class="fadeIn"&gt;Hello&lt;/div&gt;</kbd>
+                </p>
+                <p>If you want to have ending effects, you can also set "data-vs-out-" attributes:<br/><kbd>data-vs-out-time="9" data-vs-out-class="fadeOut"</kbd> 
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Animations</h3>
+                <p>jQuery-Videosync works especially well with <a href="http://daneden.github.io/animate.css/">Animate.css</a>. Just include animate.css file to your html, choose desired effect on <a href="http://daneden.github.io/animate.css/">Animate.css</a>, and specify it as 'vs-..-class' attribute: <kbd>data-vs-in-class="slideInLeft"</kbd></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 well mt40">
+                <h3 class="text-center mt10">Get it</h3><div class="row"><div class="col-xs-10 col-xs-offset-1">
+                <p>It's so simple. Download, add to page, set desired attributes.</p>
+                <p>Follow on Github: <a href="https://github.com/MA3STR0/jquery-videosync">https://github.com/MA3STR0/jquery-videosync</a></p>
+                <p class="mt15"><h4 class="text-center">Download</h4></p><p><b>Complete: </b><a class="btn btn-success mb5" href="https://raw.githubusercontent.com/MA3STR0/jquery-videosync/master/jquery.videosync.js">jquery.videosync.js</a> <br class="visible-xs"><b>&nbsp;Minimized:</b>
+                <a class="btn btn-success mb5" href="https://raw.githubusercontent.com/MA3STR0/jquery-videosync/master/jquery.videosync.min.js">jquery.videosync.min.js</a></p>
             </div>
         </div>
       </div>
