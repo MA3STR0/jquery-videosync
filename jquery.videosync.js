@@ -10,16 +10,16 @@
             var nodes = [];
             var lastTime = -1;
             var time;
-              $('.vs').each(function(){
-                  var $this = $(this);
-                  nodes.push({
-                      start: parseFloat($this.data('vs-in-time')),
-                      end: parseFloat($this.data('vs-out-time')),
-                      classIn: $this.data('vs-in-class'),
-                      classOut: $this.data('vs-out-class'),
-                      element: $this
-                  });
-              });
+            $('.vs').each(function(){
+                var $this = $(this);
+                nodes.push({
+                    start: parseFloat($this.data('vs-in-time')),
+                    end: parseFloat($this.data('vs-out-time')),
+                    classIn: $this.data('vs-in-class'),
+                    classOut: $this.data('vs-out-class'),
+                    element: $this
+                });
+            });
             video.addEventListener('timeupdate', function(){
                 time = parseFloat(video.currentTime);
                 if (Math.abs(time - lastTime) < 0.1) {
@@ -43,5 +43,7 @@
             }, false);
         });
     };
-    $('video.vs-source').videosync();
+    $(document).ready(function(){
+        $('video.vs-source').videosync();
+    });
 }(jQuery));
