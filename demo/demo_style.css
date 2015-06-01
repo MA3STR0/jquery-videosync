@@ -27,9 +27,9 @@
     transition: opacity 0.5s linear;
 }
 
-.jumbotron {
+.container .jumbotron {
     position: relative;
-    margin: 0 20px;
+    border-radius: 0;
 }
 
 .jumbotron > h3 {
@@ -44,7 +44,7 @@
 /* Banners */
 .banner {
     background: -webkit-linear-gradient(top,#1eb2df, #17a7d2);
-    border-radius: 5px;
+    background: linear-gradient(top,#1eb2df, #17a7d2);
     padding: 7px 20px 8px 20px;
     position: absolute;
     bottom: -20px;
@@ -57,14 +57,13 @@
 
 @import url(http://fonts.googleapis.com/css?family=Patua+One);
 
+.ribbon-row {
+    margin-bottom: -5px;
+}
+
 .ribbon {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    right: 0;
     padding: .34em 1em;
     margin: 0;
-    margin-top: 5%;
     color: #ffffff;
     font: 26px 'Patua One', sans-serif;
     text-align: center;
@@ -78,14 +77,20 @@
 }
 
 .ribbon:before, .ribbon:after {
-        content: "";
-        width:.2em;
-        bottom:-.5em;
-        position:absolute;
-        display:block;
-        border: .9em solid #1eb2df;
-        box-shadow:0px 1px 0px rgba(0,0,0,0.4);
-        z-index:-2;
+    content: "";
+    width:.2em;
+    bottom:-.5em;
+    position:absolute;
+    display:block;
+    border: .9em solid #1eb2df;
+    box-shadow:0px 1px 0px rgba(0,0,0,0.4);
+    z-index:-2;
+}
+
+@media (max-width: 797px) {
+    .ribbon:before, .ribbon:after {
+        display: none;
+    }
 }
 
 .ribbon:before {
@@ -131,6 +136,9 @@
 }
 .mb25 {
     margin-bottom: 25px;
+}
+.mb40 {
+    margin-bottom: 40px;
 }
 .mt10 {
     margin-top: 10px;
