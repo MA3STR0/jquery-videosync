@@ -20,17 +20,33 @@
   <!-- YM --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter30574592 = new Ya.Metrika({id:30574592, webvisor:true, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/30574592" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /YM -->
     <section>
       <div class="container">
-        <div class="row mb25">
+        <div class="row mb15">
           <div class="col-md-12">
-            <h1>jQuery VideoSync</h1>
-            <h3>Interactive videos for your website</h3>
+              <h1 class="text-center"><a href="https://github.com/MA3STR0/jquery-videosync">jQuery VideoSync</a></h1>
+            <h3 class="text-center">Synchronize page effects with video playback</h3>
           </div>
         </div>
-        <div class="row jumbotron">
-            <div class="ribbon">
-                <div class="ribbon-content">Synchronize page elements with video playback
+
+        <div class="row mb25">
+            <div class="col-sm-12">
+                <h2>Features</h2>
+                <p>VideoSync updates elements based on video timer, so your effect will run during particular playback interval.</p>
+                <p>It makes video not so isolated on your page, adding interactivity and content accents.</p>
+                <ul>
+                    <li>set start- and end- time triggers</li>
+                    <li>it will dynamically add some class to your elements</li>
+                    <li>that can show, hide or animate elements</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row ribbon-row">
+            <div class="ribbon col-xs-12">
+                <div class="ribbon-content">Demo Time
                 </div>
             </div>
+        </div>
+        <div class="row jumbotron">
           <div class="col-sm-7 col-md-7">
             <div class="video-image-frame mb15">
                 <video class="vs-source" width="100%" autoplay controls loop preload="auto">
@@ -49,29 +65,25 @@
           <div class="vs animated banner prehide" data-vs-in-class="flipInX" data-vs-out-class="flipOutX" data-vs-in-time="23">Cool, huh?<br/>Yet so simple!
           </div>
         </div>
+
         <div class="row">
             <div class="col-sm-12">
-                <h3>Features</h3>
-                <p>Videosync triggers element updates based on video timer, so your effect will happen exactly when a particular content is shown in the video. You can:
-                <ul>
-                    <li>Show/hide elements</li>
-                    <li>Animate elements</li>
-                    <li>Set start- and end- time as event triggers</li>
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h3>How does it work?</h3>
+                <h3>Set it up</h3>
                 <ul>
                     <li>Add "vs-source" class to your video and "vs" to animated elements</li>
-                    <li></li>
+                    <li>Specify start time and class name as "data-vs-in-" attributes for desired elements, and videsync will add this class when video timer triggers:<br/>
+                <kbd>&lt;div class="vs" data-vs-in-time="4.2" data-vs-in-class="fadeIn"&gt;Hello&lt;/div&gt;</kbd></li>
+                    <li>If you want to have ending effects, you can also set "data-vs-out-" attributes:<br/><kbd>data-vs-out-time="9" data-vs-out-class="fadeOut"</kbd> 
+                    </li>
                 </ul>
-                <p>Specify start time and class name as "data-vs-in-" attributes for desired elements, and videsync will add this class when video timer triggers:<br/>
-                <kbd>&lt;div class="vs" data-vs-in-time="4.2" data-vs-in-class="fadeIn"&gt;Hello&lt;/div&gt;</kbd>
-                </p>
-                <p>If you want to have ending effects, you can also set "data-vs-out-" attributes:<br/><kbd>data-vs-out-time="9" data-vs-out-class="fadeOut"</kbd> 
-                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Minimal Example</h3>
+                <iframe height='312' scrolling='no' src='//codepen.io/MA3STR0/embed/PqpqQd/?height=312&theme-id=0&default-tab=html' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/MA3STR0/pen/PqpqQd/'>VideoSync minimal demo</a> by Anton (<a href='http://codepen.io/MA3STR0'>@MA3STR0</a>) on <a href='http://codepen.io'>CodePen</a>.
+                </iframe>
             </div>
         </div>
         <div class="row">
@@ -80,7 +92,8 @@
                 <p>jQuery-Videosync works especially well with <a href="http://daneden.github.io/animate.css/">Animate.css</a>. Just include animate.css file to your html, choose desired effect on <a href="http://daneden.github.io/animate.css/">Animate.css</a>, and specify it as 'vs-..-class' attribute: <kbd>data-vs-in-class="slideInLeft"</kbd></p>
             </div>
         </div>
-        <div class="row">
+
+        <div class="row mb40">
             <div class="col-xs-10 col-xs-offset-1 well mt40">
                 <h3 class="text-center mt10">Get it</h3><div class="row"><div class="col-xs-10 col-xs-offset-1">
                 <p>It's so simple. Download, add to page, set desired attributes.</p>
@@ -89,7 +102,6 @@
                 <a class="btn btn-success mb5" href="https://raw.githubusercontent.com/MA3STR0/jquery-videosync/master/jquery.videosync.min.js">jquery.videosync.min.js</a></p>
             </div>
         </div>
-      </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="jquery.videosync.min.js"></script>
