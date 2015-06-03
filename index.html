@@ -23,19 +23,26 @@
         <div class="row mb15">
           <div class="col-md-12">
               <h1 class="text-center"><a href="https://github.com/MA3STR0/jquery-videosync">jQuery VideoSync</a></h1>
-            <h3 class="text-center">Synchronize page effects with video playback</h3>
+            <h2 class="text-center">Sync page content with html5 video</h2>
           </div>
         </div>
 
         <div class="row mb25">
-            <div class="col-sm-12">
-                <h2>Features</h2>
-                <p>VideoSync updates elements based on video timer, so your effect will run during particular playback interval.</p>
-                <p>It makes video not so isolated on your page, adding interactivity and content accents.</p>
-                <ul>
-                    <li>set start- and end- time triggers</li>
-                    <li>it will dynamically add some class to your elements</li>
-                    <li>that can show, hide or animate elements</li>
+            <div class="col-sm-6">
+                <h3>Features</h3>
+                <ul class="features">
+                    <li>Updates elements by video timer</li>
+                    <li>Visually connects video with rest of the page</li>
+                    <li>Puts accents on video content</li>
+                    <li>Adds interactivity</li>
+                </ul>
+            </div>
+            <div class="col-sm-6">
+                <h3>How it works</h3>
+                <ul class="features">
+                    <li>Set start- and end- time triggers</li>
+                    <li>VideoSync will add some class to elements</li>
+                    <li>It can show, hide or animate elements</li>
                 </ul>
             </div>
         </div>
@@ -69,8 +76,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <h3>Set it up</h3>
-                <ul>
-                    <li>Add "vs-source" class to your video and "vs" to animated elements</li>
+                <ul class="instructions">
+                    <li>Add "vs-source" class to your video and "vs" to animated elements:<br/> <kbd>&lt;video class="vs-source"&gt;&lt;/video&gt;...&lt;div class="vs"&gt;Hello&lt;/div&gt;</kbd></li>
                     <li>Specify start time and class name as "data-vs-in-" attributes for desired elements, and videsync will add this class when video timer triggers:<br/>
                 <kbd>&lt;div class="vs" data-vs-in-time="4.2" data-vs-in-class="fadeIn"&gt;Hello&lt;/div&gt;</kbd></li>
                     <li>If you want to have ending effects, you can also set "data-vs-out-" attributes:<br/><kbd>data-vs-out-time="9" data-vs-out-class="fadeOut"</kbd> 
@@ -94,11 +101,11 @@
         </div>
 
         <div class="row mb40">
-            <div class="col-xs-10 col-xs-offset-1 well mt40">
-                <h3 class="text-center mt10">Get it</h3><div class="row"><div class="col-xs-10 col-xs-offset-1">
+            <div class="col-xs-10 col-xs-offset-1 well mt40 text-center">
+                <h3 class="mt10">Get it</h3><div class="row"><div class="col-xs-10 col-xs-offset-1">
                 <p>It's so simple. Download, add to page, set desired attributes.</p>
-                <p>Follow on Github: <a href="https://github.com/MA3STR0/jquery-videosync">https://github.com/MA3STR0/jquery-videosync</a></p>
-                <p class="mt15"><h4 class="text-center">Download</h4></p><p><b>Complete: </b><a class="btn btn-success mb5" href="https://raw.githubusercontent.com/MA3STR0/jquery-videosync/master/jquery.videosync.js">jquery.videosync.js</a> <br class="visible-xs"><b>&nbsp;Minimized:</b>
+                <p><b>Follow on Github:</b> <a href="https://github.com/MA3STR0/jquery-videosync">https://github.com/MA3STR0/jquery-videosync</a></p>
+                <p class=""><h4 class="text-center mt25 mb15">Download</h4></p><p><b>Complete: </b><a class="btn btn-success mb5" href="https://raw.githubusercontent.com/MA3STR0/jquery-videosync/master/jquery.videosync.js">jquery.videosync.js</a> <br class="visible-xs visible-sm"><b>&nbsp;Minimized:</b>
                 <a class="btn btn-success mb5" href="https://raw.githubusercontent.com/MA3STR0/jquery-videosync/master/jquery.videosync.min.js">jquery.videosync.min.js</a></p>
             </div>
         </div>

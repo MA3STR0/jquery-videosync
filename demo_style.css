@@ -1,6 +1,22 @@
+body {
+    font-size: 16px;
+}
+
 .video-header {
     margin-bottom: 25px;
     text-align: center;
+}
+
+.features {
+    font-size: 18px;
+}
+
+.features > li {
+    margin-bottom: 4px;
+}
+
+.instructions > li {
+    margin-bottom: 10px;
 }
 
 .facts {
