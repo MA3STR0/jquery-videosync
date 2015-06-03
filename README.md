@@ -92,7 +92,7 @@ If reporting a bug, please add a simplified example.
 **Pull requests**
 
 Code contributions are appreciated, just make sure to test your changes in major
-browsers and doublecheck the code in jshint.
+browsers and doublecheck the code in jslint.
 
 Authors
 -------

@@ -1,16 +1,19 @@
 /*! jQuery VideoSync
  *  https://github.com/MA3STR0/jquery-videosync
  *  Manipulates page content based on video playback time */
-(function($) {
-    $.fn.videosync = function() {
-        return this.each( function() {
-            var classIn = 'vs-in';
-            var classOut = 'vs-out';
-            var video = this;
-            var nodes = [];
-            var lastTime = -1;
-            var time;
-            $('.vs').each(function(){
+/*global document, jQuery*/
+
+(function ($) {
+    'use strict';
+    $.fn.videosync = function () {
+        return this.each(function () {
+            var classIn = 'vs-in',
+                classOut = 'vs-out',
+                video = this,
+                nodes = [],
+                lastTime = -1,
+                time;
+            $('.vs').each(function () {
                 var $this = $(this);
                 nodes.push({
                     start: parseFloat($this.data('vs-in-time')),
@@ -20,14 +23,15 @@
                     element: $this
                 });
             });
-            video.addEventListener('timeupdate', function(){
+            video.addEventListener('timeupdate', function () {
+                var node, i;
                 time = parseFloat(video.currentTime);
                 if (Math.abs(time - lastTime) < 0.1) {
-                    return
+                    return;
                 }
                 lastTime = time;
-                for (var i = 0; i < nodes.length; i++) {
-                    var node = nodes[i];
+                for (i = 0; i < nodes.length; i += 1) {
+                    node = nodes[i];
                     if ((!node.element.hasClass(classIn)) && (time >= node.start) && (node.end ? time < node.end : true)) {
                         node.element.removeClass(classOut);
                         node.element.removeClass(node.classOut);
@@ -43,7 +47,7 @@
             }, false);
         });
     };
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('video.vs-source').videosync();
     });
 }(jQuery));
