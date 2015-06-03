@@ -1,19 +1,23 @@
 jQuery-VideoSync
 ================
 
-###jQuery plugin that helps you animate elements based on video playback timer
+###Synchronize page effects with video playback
 
-Tiny (<1KB minimized), easy to use, CSS-animation friendly.
+![Demo](http://e5t.ro/jquery_videosync_demo.gif)
 
-**DEMO**: http://MA3STR0.github.io/jquery-videosync
+Easy, tiny <1kB, CSS-friendly
+------------------------------
 
-TL;DR
------
-    <video class="vs-source">
-      <source src="demo.mp4" type="video/mp4">
-    </video>
-    <h3 class="vs animated" data-vs-in-time="3" data-vs-in-class="bounce">I will bounce on 3rd second of video</h3>
-      
+Makes video not isolated on the page, adds interactivity and content accents. As easy as:
+
+```html
+   <video class="vs-source" controls><source src="demo.mp4" type="video/mp4"></video>
+   <h3 class="vs animated" data-vs-in-time="3" data-vs-in-class="bounce">I will bounce on 3rd second</h3>
+```
+**DEMO PAGE**: http://MA3STR0.github.io/jquery-videosync
+
+**CODEPEN**: http://codepen.io/MA3STR0/pen/PqpqQd
+
 
 Installation
 ------------
@@ -26,8 +30,6 @@ Installation
 
 Usage
 -----
-
-**HTML**
 
 * Add `vs-source` class to the main <video> element: `<video class="vs-source" autoplay loop>`
 * For elements that you want to update based on playback:
@@ -52,15 +54,15 @@ A very minimal page can look like:
 
 See same working example on codepen: http://codepen.io/MA3STR0/pen/PqpqQd
 
-**JS (optional)**
-
-  * Instead of adding `vs-source` class to video element you can directly call its .videosync() method to make it the source for plugin timing: `$('#my-video').videosync()`
-
 **Animations**
 
 CSS animations are really easy to use with class toggling. The easiest way to get started is [Animate.css](https://github.com/daneden/animate.css/): just include animate.css, choose desired animation and add appropriate class to `data-vs-in-class` attribute:
 
     <div class="vs animated" data-vs-in-class="bounce" data-videosync-start="3">I will bounce in 3rd second of video</div>
+
+**JS (optional)**
+
+Instead of adding `vs-source` class to video element you can directly call its .videosync() method to make it the source for plugin timing: `$('#my-video').videosync()`
 
 
 Compatibility
