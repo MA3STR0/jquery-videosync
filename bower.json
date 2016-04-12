@@ -25,7 +25,8 @@
     "jquery_videosync_demo.mp4",
     "src.mp4",
     "bower.json",
-    "jquery.videosync.min.js.map"
+    "jquery.videosync.min.js.map",
+    "build.sh"
   ],
    "dependencies": {
      "jquery": ">=1.8.3"
