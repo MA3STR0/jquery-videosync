@@ -5,6 +5,10 @@ jQuery-VideoSync
 
 ![Demo](http://e5t.ro/jquery_videosync_demo.gif)
 
+**DEMO PAGE**: http://MA3STR0.github.io/jquery-videosync
+
+**CODEPEN**: http://codepen.io/MA3STR0/pen/PqpqQd
+
 ###Easy, tiny <1kB, CSS-friendly
 
 Makes video not so isolated on the page, adds interactivity and content accents. As easy as:
@@ -13,9 +17,6 @@ Makes video not so isolated on the page, adds interactivity and content accents.
    <video class="vs-source" controls><source src="demo.mp4" type="video/mp4"></video>
    <h3 class="vs animated" data-vs-in-time="3" data-vs-in-class="bounce">I will bounce on 3rd second</h3>
 ```
-**DEMO PAGE**: http://MA3STR0.github.io/jquery-videosync
-
-**CODEPEN**: http://codepen.io/MA3STR0/pen/PqpqQd
 
 
 Installation
