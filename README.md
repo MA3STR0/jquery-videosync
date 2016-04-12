@@ -22,10 +22,17 @@ Makes video not so isolated on the page, adds interactivity and content accents.
 Installation
 ------------
 
-1. Include script file `jquery.videosync.js` or `jquery.videosync.min.js` to your html in any place after jQuery.
-    <script src="/path/to/jquery.videosync.js"></script>
+1. Get JS files
+  - With bower: `bower install jquery-videosync`
+  - Or manually download [jquery.videosync.js](https://raw.githubusercontent.com/MA3STR0/jquery-videosync/master/jquery.videosync.js) and copy it to your project 
 
-2. You proabably want to use [Animate.css](https://github.com/daneden/animate.css/), so include it too
+2. Link script file `jquery.videosync.js` in your html at any place after jQuery.
+    ```
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery-videosync/jquery.videosync.js"></script>
+    ```
+
+3. You proabably want to use [Animate.css](https://github.com/daneden/animate.css/), so include it too
 
 
 Usage
